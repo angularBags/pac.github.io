@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <link rel="stylesheet" href="style/style.css">
+	   
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="convas" width=480 height=480 style="background:#eef;">
+		
+	</canvas>
+	<div id='containerBtn'>
+		<div class="btn" id='start'>Start</div>
+		<div class="btn" id='two'>2 players</div>
+		<div class="btn" id='options'>Options</div>
+		<div class="btn" id='palayer_1'>Palayer 1</div>
+		<div class="btn" id='palayer_2'>Palayer 2</div>
+		<div class="btn" id='back'>Back</div>
+		<div class="btn" id='restart'>Restart</div>	 	
+		<div id="menuOptions" >
+			<canvas id="showPac" width=300  height=100 style="background:#eef;"> </canvas>
+			<div><input type="color" id="feelColor"><label> feel color</label></div>
+			<div><input type="color" id="strokeColor"><label> stroke color</label></div>
+			<div><input type="color" id="eyesFeelColor"><label> feel eyes</label></div>
+			<div><input type="color" id="eyesStrokeColor"><label> stroke eyes</label></div>
+			<div><input type="number" id="eyesRadius"><label> radius eyes</label></div>
+			<div class="btn" id='save'>save options</div>
+		</div>
+	</div>
+		<script src="javaScript/class.js"></script>
+		<script src="javaScript/main.js"></script>		
+		<script src="javaScript/menu.js"></script>		
+		<script src="animate/animateFn.js"></script>
+</body>
+
+</html>

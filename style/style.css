@@ -1,0 +1,14 @@
+ @font-face{font-family:classic; src: url('/fonts/Inconsolata.otf');}
+ body{font-family:classic; color:#236; margin:0; padding:0; font-size: 45px; }
+html,body {overflow-y:hidden}
+
+#containerBtn{width:450px;  height:400px; position:relative;  }
+.btn{width:100%; height:50px; background:#def; text-align:center; margin-top:10px; cursor:pointer; border:solid 4px #49a;color:#49a; transition:0.2s;}
+.btn:hover{color:#def; background:#49a;}
+#restart{ display:none;}
+#start{}
+
+#palayer_1{display:none;}
+#palayer_2{display:none;}
+#back{display:none;}
+#menuOptions{width:100%; display:none; background:#def }
