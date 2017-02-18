@@ -76,11 +76,11 @@ function returnPac(x,y){
 		xCoordRectArr: rectsCreate.xCoordRectArr,
 		yCoordRectArr: rectsCreate.yCoordRectArr,
 		 
-		drowFace: function(){  
+		drowFace: function(){   
 			this.x_coord +=radius;
 			this.y_coord +=radius;
 			this.rotate(this.rotation);
-			 		ctx.fillStyle  = '#def'; ctx.fillRect(0,0, convas.width, convas.height);
+			 		//ctx.fillStyle  = '#def'; ctx.fillRect(0,0, convas.width, convas.height);
 			ctx.beginPath();
 				ctx.arc(this.x_coord , this.y_coord, radius,((Math.PI/180)*(180+(mouthSize+10))),((Math.PI/180)*-(this.rotate1-this.mouthSize)), false);	
 				ctx.lineTo(this.x_coord, this.y_coord);
@@ -371,7 +371,7 @@ function returnEnemy(x,y){
 function returnFood(xFood,yFood){
 	var xFood = 0;
 	var yFood = 0;
-	function emptyCoord(){
+	function emptyCoord(){ 
 			var xCoordRect = Math.floor(Math.random()*convas.width);
 			var yCoordRect = Math.floor(Math.random()*convas.height);
 			xCoordRect -= xCoordRect%(radius*2);

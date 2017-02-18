@@ -35,24 +35,29 @@ document.onkeydown = function checkKeycode(event){
 
 }
 
- 
- function startFn(){
+function go(){		 
+		ctx.fillStyle  = '#def'; ctx.fillRect(0,0, convas.width, convas.height);
+		collisionGhostPac();
+		collisionFoodPac();
+		drowRect();	 
+		setTimeout(theEnd,1000) ;	
+		 
+	 }
+	 
+ function clearAll(){
 	for(var i = 0; i < ghostArr.length; i++ ){  ghostArr[i].drop = 1; ghostArr[i] = "";}
 	for(var j = 0; j < pacArr.length; j++ ){  pacArr[j].drop = 1;  pacArr[j] = ""; }
 	if(food){food.drop = 1; food="" }
 	animate(go.breakId)
+ }
  
- function go(){
-		drowRect();
-		collisionGhostPac();
-		collisionFoodPac();
-		setTimeout(theEnd,1000) ;
-	}
-	 
-	 createPac(players);
-	 createGhost(); 
-	 food = returnFood(80,80);
+ function startFn(){
 	 animate(go,fps); 
+
+	 food = returnFood(80,80);
+	 createPac(players);
+	 createGhost();
+ 
 	 pacArr[0].fillStyle = optionsObj.player1.fillStyle;
 	 pacArr[0].strokeStyle = optionsObj.player1.strokeStyle 
 	 pacArr[0].eyesFillStyle =  optionsObj.player1.eyesFillStyle;

@@ -28,6 +28,7 @@
 	restart.addEventListener('click',function(){
 		 	
 		restart.style.display = 'none';
+	 clearAll()
 	 startFn();
 	},false);
 	
